@@ -43,7 +43,9 @@ async function bootstrap() {
   SwaggerModule.setup('docs', app, document);
 
 
-  await app.listen(configService.get('PORT'));
+  await app.listen(3000);
+  console.log('Application running on: ' + configService.get('PORT'))
+
   console.log('Application running on: ' + await app.getUrl())
 
 }
