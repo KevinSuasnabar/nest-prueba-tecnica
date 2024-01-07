@@ -44,6 +44,7 @@ async function bootstrap() {
 
 
   await app.listen(3000);
+  console.log("DIRE: ", __dirname)
   console.log('Application running on: ' + configService.get('PORT'))
 
   console.log('Application running on: ' + await app.getUrl())

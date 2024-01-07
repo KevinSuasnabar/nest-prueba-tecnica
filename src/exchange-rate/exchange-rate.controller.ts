@@ -35,4 +35,11 @@ export class ExchangeRateController {
     async updateExchangeRate(@Body() updateExchangeRateRequestDto: UpdateExchangeRateRequestDto) {
         return await this.exchangeRatesService.updateExchangeRate(updateExchangeRateRequestDto);
     }
+
+
+    @Get('change')
+    @PublicAccess()
+    async helloWord() {
+        return "Hola mundo!!!";
+    }
 }

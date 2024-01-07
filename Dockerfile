@@ -6,7 +6,8 @@ WORKDIR /app
 COPY tsconfig*.json ./
 COPY package*.json ./
 
-RUN npm ci
+RUN npm install
+RUN npm run mcontainer:run
 
 COPY src/ src/
 
